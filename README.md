@@ -24,12 +24,11 @@ In this project, we would like to understand the rat population and its movement
 
 ###  Data
 
-Our data for this project comes from a number of different sources. 
-
-The following datasets came from ['NYC Open Data'](#https://opendata.cityofnewyork.us/). 
+Our data for this project comes from NYC Open Data and the IRS.
 
 * ['NYC Open Data Rat Sightings'](#https://data.cityofnewyork.us/Social-Services/Rat-Sightings/3q43-55fe/about_data) 
 * ['NYC Open Data on Rat Inspections'](#https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj/about_data) 
 * ['NYC Open Data on Location of Catch Basins'](#https://data.cityofnewyork.us/Environment/NYCDEP-Citywide-Catch-Basins/2c5m-rke8)
+* ['IRS SOI Tax Stats'](#https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-zip-code-data-soi)
 
 
