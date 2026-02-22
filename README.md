@@ -31,4 +31,11 @@ Our data for this project comes from NYC Open Data and the IRS.
 * ['NYC Open Data on Location of Catch Basins'](https://data.cityofnewyork.us/Environment/NYCDEP-Citywide-Catch-Basins/2c5m-rke8)
 * ['IRS SOI Tax Stats'](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-zip-code-data-soi)
 
+### Instructions
 
+
+1. Go to scr/data/download_recent_data.ipynb and run the notebook to download the recent data from NYC Open data.
+
+2. Go to the folder scr/cleaning and run the three notebooks found there to clean the data that has just been downloaded.
+
+3. After this, one can go to the notebooks/eda.ipynb and run the whole notebook.
