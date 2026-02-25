@@ -39,3 +39,10 @@ Our data for this project comes from NYC Open Data and the IRS.
 2. Go to the folder scr/cleaning and run the three notebooks found there to clean the data that has just been downloaded.
 
 3. After this, one can go to the notebooks/eda.ipynb and run the whole notebook.
+
+
+### To-Do List
+
+1. Need to remove data that is not used later e.g. catch_basin, and IRS data.
+2. Need to remove notebooks that are no longer relevant.
+3. Probably should make separate notebooks for data stored at various ranges (location size long+lat range / ZIP / borough /citywide, daily/weekly/monthly data size considered).
