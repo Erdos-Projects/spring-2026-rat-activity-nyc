@@ -31,6 +31,17 @@ Our data for this project comes from NYC Open Data and the IRS.
 * ['NYC Open Data on Location of Catch Basins'](https://data.cityofnewyork.us/Environment/NYCDEP-Citywide-Catch-Basins/2c5m-rke8)
 * ['IRS SOI Tax Stats'](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-zip-code-data-soi)
 
+### Literature
+
+There is an impressive amount of literature focused on understanding rat activity in New York City. We highlight some of them since they are worth a read. Included also are some recent news articles that are might be relevant to someone interested in rat sightings in NYC. In recent years, NYC has also implemented ['new sanitation and trash rules')(https://portal.311.nyc.gov/article/?kanumber=KA-02086). Awareness of city policies will and must play a role in our modeling efforts.
+
+* ['Rat sightings in New York City are associated with neighborhood sociodemographics, housing characteristics, and proximity to open public space'](https://pmc.ncbi.nlm.nih.gov/articles/PMC4157232/)
+* ['Computational Urban Ecology of New York City Rats](https://pmc.ncbi.nlm.nih.gov/articles/PMC12330660/)
+* ['"If it’s cold, they stop mating": New York City rat population may be on the decline'](https://www.theguardian.com/us-news/2026/feb/28/new-york-city-rat-population-decline)
+* ["NYC Rats Are Fleeing – for an Incredible 12 Straight Months!"](https://www.nyc.gov/site/dsny/news/25-039/nyc-rats-fleeing-an-incredible-12-straight-months-#/0)
+* ['NYC Rat Sightings'](https://kaityb24.github.io/RatSightings/)
+* ['Official NYC Bin Availability Expands Citywide Ahead of June 2026 Compliance Deadline'](https://www.nyc.gov/site/dsny/news/26-016/official-nyc-bin-availability-expands-citywide-ahead-june-2026-compliance-deadline)
+
 ### Instructions
 
 
