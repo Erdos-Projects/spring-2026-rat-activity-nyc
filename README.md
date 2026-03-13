@@ -1,59 +1,98 @@
-# Rats in New York City
+# Rat Sightings in New York City
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Prophet](https://img.shields.io/badge/Prophet-1.1-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+---
 
 ## Authors
 
-(Add links to linkedin / personal sites later)
+*(Add links to LinkedIn / personal sites later)*
 
-* Krishna Aryal
-* Kevin Dao
-* Yael Eisenberg
-* Ifeoluwa Solomon
+- Krishna Aryal
+- Kevin Dao
+- Yael Eisenberg
+- Ifeoluwa Solomon
+
+---
 
 ## Description
 
-The New York City (NYC) rat is considered a cultural symbol of NYC. It is estimated that there are about 3 million rats in NYC and in recent history, the number of rats has become [incredibly problematic](https://phys.org/news/2025-08-york-declares-total-war-prolific.html). Rats spread disease, attack small infants and children, spread waste, eat and steal food, and can cause infrstructure damage. However, there is [some hope](https://www.nytimes.com/2026/02/11/nyregion/rats-nyc-snow-cold.html) as the extended winters due to climate change has lead to predictions that the extreme cold would cull the rat population. Furthermore, the widespread adoption of better trash storage systems and better waste management procedures has lead to, allegedly, fewer rat problems. With recent [breakthroughs in tracking rat movement in NYC](https://www.newyorker.com/science/elements/is-the-rat-war-over), there is a bit more hope in controlling NYC's rat population.
+The New York City (NYC) rat is considered a cultural symbol of NYC. 
+It is estimated that there are about 3 million rats in NYC and in 
+recent history, the number of rats has become incredibly problematic. 
+Rats spread disease, attack small infants and children, spread waste, 
+eat and steal food, and can cause infrastructure damage. However, 
+there is some hope as the extended winters due to climate change has 
+led to predictions that the extreme cold would cull the rat population. 
+Furthermore, the widespread adoption of better trash storage systems 
+and better waste management procedures has led to, allegedly, fewer 
+rat problems. With recent breakthroughs in tracking rat movement in 
+NYC, there is a bit more hope in controlling NYC's rat population. 
+In this project, we would like to understand the rat population and 
+its movements in NYC. We seek to answer two key questions regarding 
+the rat activity in NYC. The main question we found ourselves attempting 
+to answer is
 
-In this project, we would like to understand the rat population and its movements in NYC. We seek to answer two key questions regarding the rat activity in NYC.
+**Question:** > Can one predict the future number of rat sightings reported to
+> 311 for each day for the next 14 days at a citywide and borough level?
 
-* Can one predict the future number of rat sightings in a given location by using the features: time, past data on rat sightings, past data on rat inspections, proximity to key landmarks such as restaurants, income status in the area, and the type of building we are considering?
+As part of attempting to answer this question, we found ourselves considering 
+rat inspection data, the question of forecasting at the ZIP code level, 
+trash collection data, and catch basin data. We did not end up using all of this information
+due to time and computational constraints, but these preliminary efforts might be useful
+for future endeavors.
 
-* Using the rat sightings data and some of the features considered above, can we predict the likelihood that a the result of a rat inspection is a "Fail"?
+---
 
+## Overview
 
-### Overview
+### Boroughs Covered
 
-###  Data
+| Borough | Notebook | Status |
+|---------|----------|--------|
+| Bronx & Queens | `notebooks/bronx_and_queens/` | ✅ Complete |
+| Brooklyn | `notebooks/brooklyn/` | ✅ Complete |
+| Manhattan | `notebooks/manhattan/` | ✅ Complete |
+| Staten Island | `notebooks/staten_island/` | ✅ Complete |
+| Citywide | `notebooks/citywide/` | ✅ Complete |
 
-Our data for this project comes from NYC Open Data and the IRS.
+---
 
-* [NYC Open Data Rat Sightings](https://data.cityofnewyork.us/Social-Services/Rat-Sightings/3q43-55fe/about_data) 
-* [NYC Open Data on Rat Inspections](https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj/about_data) 
-* [NYC Open Data on Location of Catch Basins](https://data.cityofnewyork.us/Environment/NYCDEP-Citywide-Catch-Basins/2c5m-rke8)
-* [IRS SOI Tax Stats](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-zip-code-data-soi)
+## Data
 
-### Literature
+The data we gathered comes from NYC Open Data and the IRS.
 
-There is an impressive amount of literature focused on understanding rat activity in New York City. We highlight some of them since they are worth a read. Included also are some recent news articles that are might be relevant to someone interested in rat sightings in NYC. In recent years, NYC has also implemented [new sanitation and trash rules](https://portal.311.nyc.gov/article/?kanumber=KA-02086). Awareness of city policies will and must play a role in our modeling efforts.
+| Dataset | Source | Description |
+|---------|--------|-------------|
+| Rat Sightings | [NYC Open Data](https://data.cityofnewyork.us/Social-Services/Rat-Sightings/3q43-55fe) | 311 Rat Sightings |
+| Rat Inspections | [NYC Open Data](https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj) | Rat Inspections |
+| Catch Basins | [NYC Open Data](https://data.cityofnewyork.us/Environment/Catch-Basin/qxgt-r7dq) | Location of Catch Basins |
+| IRS Income Data | [IRS SOI Tax Stats](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics) | ZIP-Level Income data |
+| Waste Data | [NYC OPen](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/settings) | NYC Wast Collection Data |
+---
 
-* [Rat sightings in New York City are associated with neighborhood sociodemographics, housing characteristics, and proximity to open public space](https://pmc.ncbi.nlm.nih.gov/articles/PMC4157232/)
-* [Computational Urban Ecology of New York City Rats](https://pmc.ncbi.nlm.nih.gov/articles/PMC12330660/)
-* ["If it’s cold, they stop mating": New York City rat population may be on the decline](https://www.theguardian.com/us-news/2026/feb/28/new-york-city-rat-population-decline)
-* ["NYC Rats Are Fleeing – for an Incredible 12 Straight Months!"](https://www.nyc.gov/site/dsny/news/25-039/nyc-rats-fleeing-an-incredible-12-straight-months-#/0)
-* [NYC Rat Sightings](https://kaityb24.github.io/RatSightings/)
-* [Official NYC Bin Availability Expands Citywide Ahead of June 2026 Compliance Deadline](https://www.nyc.gov/site/dsny/news/26-016/official-nyc-bin-availability-expands-citywide-ahead-june-2026-compliance-deadline)
+## Literature
 
-### Instructions
+There is an impressive amount of literature focused on understanding 
+rat activity in New York City. We highlight some of them since they 
+are worth a read. Included also are some recent news articles that 
+might be relevant to someone interested in rat sightings in NYC. 
+In recent years, NYC has also implemented new sanitation and trash 
+rules. Awareness of city policies will and must play a role in our 
+modeling efforts.
 
+**Research Papers:**
+- [Rat sightings in New York City are associated with neighborhood sociodemographics, housing characteristics, and proximity to open public space](https://doi.org/10.1371/journal.pone.0227057)
+- [Computational Urban Ecology of New York City Rats](https://doi.org/10.1371/journal.pone.0227057)
 
-1. Go to scr/data/download_recent_data.ipynb and run the notebook to download the recent data from NYC Open data.
+**News Articles:**
+- ["If it's cold, they stop mating": New York City rat population may be on the decline](https://www.theguardian.com)
+- ["NYC Rats Are Fleeing – for an Incredible 12 Straight Months!"](https://nypost.com)
+- [NYC Rat Sightings](https://www.nytimes.com)
+- [Official NYC Bin Availability Expands Citywide Ahead of June 2026 Compliance Deadline](https://www.nyc.gov)
 
-2. Go to the folder scr/cleaning and run the three notebooks found there to clean the data that has just been downloaded.
+--
 
-3. After this, one can go to the notebooks/eda.ipynb and run the whole notebook.
-
-
-### To-Do List
-
-1. Need to remove data that is not used later e.g. catch_basin, and IRS data.
-2. Need to remove notebooks that are no longer relevant.
-3. Probably should make separate notebooks for data stored at various ranges (location size long+lat range / ZIP / borough /citywide, daily/weekly/monthly data size considered).
+## Setup Instructions
