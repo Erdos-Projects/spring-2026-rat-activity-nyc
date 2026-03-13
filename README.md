@@ -1,4 +1,4 @@
-# 🐀 Rats in New York City
+# Rat Sightings in New York City
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Prophet](https://img.shields.io/badge/Prophet-1.1-orange)
@@ -6,7 +6,7 @@
 
 ---
 
-## 👥 Authors
+## Authors
 
 *(Add links to LinkedIn / personal sites later)*
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 📋 Description
+## Description
 
 The New York City (NYC) rat is considered a cultural symbol of NYC. 
 It is estimated that there are about 3 million rats in NYC and in 
@@ -29,33 +29,30 @@ led to predictions that the extreme cold would cull the rat population.
 Furthermore, the widespread adoption of better trash storage systems 
 and better waste management procedures has led to, allegedly, fewer 
 rat problems. With recent breakthroughs in tracking rat movement in 
-NYC, there is a bit more hope in controlling NYC's rat population.
-
+NYC, there is a bit more hope in controlling NYC's rat population. 
 In this project, we would like to understand the rat population and 
 its movements in NYC. We seek to answer two key questions regarding 
-the rat activity in NYC.
+the rat activity in NYC. The main question we found ourselves attempting 
+to answer is
 
-**Question 1:**
-> Can one predict the future number of rat sightings in a given 
-> location by using the features: time, past data on rat sightings, 
-> past data on rat inspections, proximity to key landmarks such as 
-> restaurants, income status in the area, and the type of building 
-> we are considering?
+**Question:** > Can one predict the future number of rat sightings reported to
+> 311 for each day for the next 14 days at a citywide and borough level?
 
-**Question 2:**
-> Using the rat sightings data and some of the features considered 
-> above, can we predict the likelihood that the result of a rat 
-> inspection is a "Fail"?
+As part of attempting to answer this question, we found ourselves considering 
+rat inspection data, the question of forecasting at the ZIP code level, 
+trash collection data, and catch basin data. We did not end up using all of this information
+due to time and computational constraints, but these preliminary efforts might be useful
+for future endeavors.
 
 ---
 
-## 🗺️ Overview
+## Overview
 
 ### Boroughs Covered
 
 | Borough | Notebook | Status |
 |---------|----------|--------|
-| Bronx & Queens | `notebooks/Bronx_and_Queens/` | ✅ Complete |
+| Bronx & Queens | `notebooks/bronx_and_queens/` | ✅ Complete |
 | Brooklyn | `notebooks/brooklyn/` | ✅ Complete |
 | Manhattan | `notebooks/manhattan/` | ✅ Complete |
 | Staten Island | `notebooks/staten_island/` | ✅ Complete |
@@ -63,20 +60,20 @@ the rat activity in NYC.
 
 ---
 
-## 📊 Data
+## Data
 
-Our data for this project comes from NYC Open Data and the IRS.
+The data we gathered comes from NYC Open Data and the IRS.
 
 | Dataset | Source | Description |
 |---------|--------|-------------|
-| Rat Sightings | [NYC Open Data](https://data.cityofnewyork.us/Social-Services/Rat-Sightings/3q43-55fe) | 311 rat complaint records |
-| Rat Inspections | [NYC Open Data](https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj) | Health dept inspection results |
-| Catch Basins | [NYC Open Data](https://data.cityofnewyork.us/Environment/Catch-Basin/qxgt-r7dq) | Location of catch basins |
-| IRS Income Data | [IRS SOI Tax Stats](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics) | ZIP-level income distribution |
-
+| Rat Sightings | [NYC Open Data](https://data.cityofnewyork.us/Social-Services/Rat-Sightings/3q43-55fe) | 311 Rat Sightings |
+| Rat Inspections | [NYC Open Data](https://data.cityofnewyork.us/Health/Rodent-Inspection/p937-wjvj) | Rat Inspections |
+| Catch Basins | [NYC Open Data](https://data.cityofnewyork.us/Environment/Catch-Basin/qxgt-r7dq) | Location of Catch Basins |
+| IRS Income Data | [IRS SOI Tax Stats](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics) | ZIP-Level Income data |
+| Waste Data | [NYC OPen](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/settings) | NYC Wast Collection Data |
 ---
 
-## 📚 Literature
+## Literature
 
 There is an impressive amount of literature focused on understanding 
 rat activity in New York City. We highlight some of them since they 
@@ -96,26 +93,6 @@ modeling efforts.
 - [NYC Rat Sightings](https://www.nytimes.com)
 - [Official NYC Bin Availability Expands Citywide Ahead of June 2026 Compliance Deadline](https://www.nyc.gov)
 
----
+--
 
-## ⚙️ Setup Instructions
-
-### Prerequisites
-
-1. Python 3.10 or higher
-2. Git LFS — required for large data files
-
-### Step 1 — Install Git LFS
-
-Large data files are stored using Git LFS.
-Install it before cloning:
-
-```bash
-# Windows — download installer from
-# https://git-lfs.com
-
-# Mac
-brew install git-lfs
-
-# Linux
-sudo apt install git-lfs
+## Setup Instructions
