@@ -32,11 +32,11 @@ rat problems. With recent breakthroughs in tracking rat movement in
 NYC, there is a bit more hope in controlling NYC's rat population. 
 In this project, we would like to understand the rat population and 
 its movements in NYC. We seek to answer two key questions regarding 
-the rat activity in NYC. The main question we found ourselves attempting 
+the rat activity in NYC. The main question(s) we found ourselves attempting 
 to answer is
 
-**Question:** > Can one predict the future number of rat sightings reported to
-> 311 for each day for the next 14 days at a citywide and borough level?
+**Questions:** Can one predict the future number of rat sightings reported to 311 for each day for the next 14 days at a citywide and borough level? 
+How can one improve these predictions by utilizing weather data and various engineered features? How differently do the models perform on each borough?
 
 As part of attempting to answer this question, we found ourselves considering 
 rat inspection data, the question of forecasting at the ZIP code level, 
@@ -52,11 +52,11 @@ for future endeavors.
 
 | Borough | Notebook | Status |
 |---------|----------|--------|
-| Bronx & Queens | `notebooks/bronx_and_queens/` | ✅ Complete |
-| Brooklyn | `notebooks/brooklyn/` | ✅ Complete |
-| Manhattan | `notebooks/manhattan/` | ✅ Complete |
-| Staten Island | `notebooks/staten_island/` | ✅ Complete |
-| Citywide | `notebooks/citywide/` | ✅ Complete |
+| Bronx & Queens | `notebooks/bronx_and_queens/` | Complete |
+| Brooklyn | `notebooks/brooklyn/` | Complete |
+| Manhattan | `notebooks/manhattan/` | Complete |
+| Staten Island | `notebooks/staten_island/` | Complete |
+| Citywide | `notebooks/citywide/` | Complete |
 
 ---
 
