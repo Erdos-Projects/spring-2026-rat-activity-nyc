@@ -2,6 +2,8 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Prophet](https://img.shields.io/badge/Prophet-1.1-orange)
+![XGBoost](https://img.shields.io/badge/XGBoost-2.1.4-red)
+![statsmodels](https://img.shields.io/badge/statsmodels-0.14.6-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
