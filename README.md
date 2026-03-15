@@ -200,11 +200,11 @@ For more details on our modeling approach, please refer [here](https://github.co
 
 ## Setting Up and Notes
 
-1. Go to the [notebooks/package_installs.ipny](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/package_installs.ipynb) notebook and run it to download the necessary packages.
+1. First, one should install the packages. We provided two ways to do this depending on the user's preferences. (a) would be to run "pip install -r requirements.txt" and option (b) is to go to the [notebooks/package_installs.ipny](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/package_installs.ipynb) notebook and run it to download the necessary packages.
 
 2. Go to [scr/data/download_recent_data.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/scr/data/download_recent_data.ipynb) and run the notebook to download the most recent data off the web.
 
-3. If one is seeking just the two week forecast of rat sightings, go to [notebooks/forecast.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/forecast.ipynb) and run the whole notebook. Then, scroll to the bottom of the notebook for the forecasts. Note that due to computational complexity and runtime, we have not chosen to use the "best model" (i.e. models with the lowest RMSEs following our evaluation method) in this notebook.
+3. If one is seeking just the two week forecast of rat sightings, go to [notebooks/forecast.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/forecast.ipynb) and run the whole notebook. The notebook should have a runtime of approximately 10 seconds. Scroll to the bottom of the notebook for the forecasts. Note that due to computational complexity and runtime, we have not chosen to use the "best model" (i.e. models with the lowest RMSEs following our evaluation method) for every borough in this notebook.
 
 ## Results and Further Work
 
