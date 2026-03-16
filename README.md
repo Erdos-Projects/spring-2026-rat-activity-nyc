@@ -216,7 +216,7 @@ For a detailed description of the results of our modeling work and for more on f
 spring-2026-rat-activity-nyc/
 ├── notebooks/
 |   ├── bronx_and_queens/ # Notebooks modeling for Bronx and Queens
-│   ├── brooklyn/ # Notebooks modeling for Brookly
+│   ├── brooklyn/ # Notebooks modeling for Brooklyn
 |   ├── citywide/
 |   |   ├── 0baseline.ipynb # Collects the Seasonal Average Forecast
 |   |   ├── 1modeling_experiments.ipynb # Initial Modeling Comparisons
@@ -236,12 +236,12 @@ spring-2026-rat-activity-nyc/
 |   |   ├── model_neural.db # Optuna Study Results of NeuralProphet
 |   |   └── xgprophet_model26.ipynb # Optuna Study Results of Hybrid Model
 |   ├── staten_island/ # Notebooks modeling for Staten Island
-|   ├── weekly_models/ # Notebooks with Initial Work on Weekly Forecasting
+|   ├── weekly_models/ # Notebooks with Initial Work on Forecasting Weekly Average
 |   ├── baselines.ipynb # Notebook with Baseline Model Performance
 |   ├── eda.ipynb # Notebook on EDA
 |   ├── evaluation_plan.md 
 |   ├── forecast.ipynb # Notebook Probiding 2 Week Forecasts
-│   └── package_installs.ipyn # Notebook to Install Necessary Files
+│   └── package_installs.ipynb # Notebook to Install Necessary Files
 ├── results/
 |   ├── eda/ # Folder Containing .pngs from EDA
 │   ├── modeling/ # Folder Containing Modeling Results
@@ -249,11 +249,16 @@ spring-2026-rat-activity-nyc/
 │   └── summary.md # Markdown Summarizing the Project
 ├── scr/ 
 │   ├── cleaning/ # Notebooks for Cleaning Data
+│   ├── features/ # Notebooks with Work on Studyng Features
 │   └── data/ # Holds Our Data 
 ├── LICENSE
 ├── README.md
 └── requirements.txt
 ```
+
+
+
+
 
 ## Example Work-Flow
 
