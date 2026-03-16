@@ -217,7 +217,16 @@ spring-2026-rat-activity-nyc/
 ├── notebooks/
 |   ├── bronx_and_queens/ # Notebooks modeling for Bronx and Queens
 │   ├── brooklyn/ # Notebooks modeling for Brookly
-|   ├── citywide/ # Notebooks modeling for Citywide Forecasts
+|   ├── citywide/
+|   |   ├── 0baseline.ipynb # Collects the Seasonal Average Forecast
+|   |   ├── 1modeling_experiments.ipynb # Initial Modeling Comparisons
+|   |   ├── 2neural_solo_prophet.ipynb # Compare Prophet vs NeuralProphet
+|   |   ├── 3xgboosted_prophet.ipynb # Tune XGBoost + Prophet Model
+|   |   ├── 4tune.ipynb # Tune NeuralProphet
+|   |   ├── 5evaluation.ipynb # Evaluation of Hybrid Model on Holdout
+|   |   ├── extra_modeling_with_more_data.ipynb # Model with Pre2020 Data
+|   |   ├── model_neural.db # Optuna Study Results of NeuralProphet
+|   |   └── xgprophet_model26.ipynb # Optuna Study Results of Hybrid Model
 |   ├── manhattan/
 |   |   ├── 0baselines.ipynb # Collects the Seasonal Average Forecast
 |   |   ├── 1modeling_experiments.ipynb # Initial Modeling Comparisons
