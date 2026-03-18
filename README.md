@@ -51,15 +51,15 @@
     ```bash
     pip install -r requirements.txt
     ```
-    and option (b) is to go to the [notebooks/package_installs.ipny](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/package_installs.ipynb) notebook and run it to download the necessary packages.
+    and option (b) is to go to the [notebooks/package_installs.ipynb](notebooks/package_installs.ipynb) and run it to download the necessary packages.
 
-2. Go to [scr/data/download_recent_data.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/scr/data/download_recent_data.ipynb) and run the notebook to download the most recent data off the web.
+2. Go to [scr/data/download_recent_data.ipynb](scr/data/download_recent_data.ipynb) and run the notebook to download the most recent data off the web.
 
-3. If one is seeking just the two week forecast of rat sightings, go to [notebooks/forecast.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/forecast.ipynb) and run the whole notebook. The notebook should have a runtime of approximately 10 seconds. Scroll to the bottom of the notebook for the forecasts. Note that due to computational complexity and runtime, we have not chosen to use the "best model" (i.e. models with the lowest mean RMSEs following our evaluation method) for every borough in this notebook.
+3. If one is seeking just the two week forecast of rat sightings, go to [notebooks/forecast.ipynb](notebooks/forecast.ipynb) and run the whole notebook. The notebook should have a runtime of approximately 10 seconds. Scroll to the bottom of the notebook for the forecasts. Note that due to computational complexity and runtime, we have not chosen to use the "best model" (i.e. models with the lowest mean RMSEs following our evaluation method) for every borough in this notebook.
 
 ## Results and Further Work
 
-For a detailed description of the results of our modeling work and for more on further work that might be done, please refer to [results/summary.md](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/results/summary.md) and [results/furtherwork.md](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/results/furtherwork.md). Due to lack of space, we have opted to collect the details in those markdown files.
+For a detailed description of the results of our modeling work and for more on further work that might be done, please refer to [results/summary.md](results/summary.md) and [results/furtherwork.md](results/furtherwork.md). Due to lack of space, we have opted to collect the details in those markdown files.
 
 
 
@@ -105,7 +105,7 @@ for future endeavors.
 
 ## Data Sources
 
-The data we gathered comes from NYC Open Data and the IRS. Not all of this data ended up being used for our forecasting purposes, but could be used in future work. There is a [notebook](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/scr/data/download_recent_data.ipynb) which downloads some of this data. The raw data can be found in [this folder](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/tree/main/scr/data). Subfolders *not* starting with "cleaned_" contains the raw data.
+The data we gathered comes from NYC Open Data and the IRS. Not all of this data ended up being used for our forecasting purposes, but could be used in future work. There is a [notebook](scr/data/download_recent_data.ipynb) which downloads some of this data. The raw data can be found in [this folder](scr/data). Subfolders *not* starting with "cleaned_" contains the raw data.
 
 | Dataset | Source | Description |
 |---------|--------|-------------|
@@ -133,16 +133,15 @@ modeling efforts.
 - [Computational Urban Ecology of New York City Rats](https://doi.org/10.1371/journal.pone.0227057)
 
 **News Articles:**
-- ["If it's cold, they stop mating": New York City rat population may be on the decline](https://www.theguardian.com)
-- ["NYC Rats Are Fleeing – for an Incredible 12 Straight Months!"](https://nypost.com)
-- [NYC Rat Sightings](https://www.nytimes.com)
-- [Official NYC Bin Availability Expands Citywide Ahead of June 2026 Compliance Deadline](https://www.nyc.gov)
+- ["If it's cold, they stop mating": New York City rat population may be on the decline](https://www.theguardian.com/us-news/2026/feb/28/new-york-city-rat-population-decline)
+- ["NYC Rats Are Fleeing – for an Incredible 12 Straight Months!"](https://www.nyc.gov/site/dsny/news/25-039/nyc-rats-fleeing-an-incredible-12-straight-months-#/0)
+- [Official NYC Bin Availability Expands Citywide Ahead of June 2026 Compliance Deadline](https://www.nyc.gov/site/dsny/news/26-016/official-nyc-bin-availability-expands-citywide-ahead-june-2026-compliance-deadline)
 
 ---
 
 ## Exploratory Data Analysis
 
-For our exploratory data analysis, we focused on trends in rat sightings reports. Initially, we had also considered extra data such as rat inspections, the location of catch basins, income levels in each borough, and trash collection in NYC. Due to limited time, our modeling attempts ended up only using rat sightings data and weather data. For more on our exploratory data analysis and what we observed, see [this notebook](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/eda.ipynb).
+For our exploratory data analysis, we focused on trends in rat sightings reports. Initially, we had also considered extra data such as rat inspections, the location of catch basins, income levels in each borough, and trash collection in NYC. Due to limited time, our modeling attempts ended up only using rat sightings data and weather data. For more on our exploratory data analysis and what we observed, see [this notebook](notebooks/eda.ipynb).
 
 Our first observation was the seasonality of rat sightings. Every borough experienced increased rat sightings during the months of June, July, and August, and a decrease in rat sightings during the months of November, December, January, and February.
 
@@ -219,18 +218,21 @@ We settled on the problem of forecasting the number of rat sightings with a fore
 
 3. We held out the data for 2025-03-01 to 2026-02-28 and did our modeling on the data from 2020-01-01 to 2025-02-28. We chose to hold out a full year since we want to have a full year to evaluate our final models on.
 
-4. As a baseline, we chose the seasonal average model. The data shows strong yearly seasonality so we chose a seasonal average model which looks back 4 years and considers a 4 day window. The performance of this baseline model for each borough and at the citywide level can be found in [this notebook](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/baselines.ipynb).
+4. As a baseline, we chose the seasonal average model. The data shows strong yearly seasonality so we chose a seasonal average model which looks back 4 years and considers a 4 day window. The performance of this baseline model for each borough and at the citywide level can be found in [this notebook](notebooks/baselines.ipynb).
 
-5. We focused mainly on doing daily forecasts. However, considering weekly rat sightings could smooth out the influence of outliers. Initial efforts towards working with weekly data can be found [in this folder](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/tree/main/notebooks/weekly_models). In our exploratory data analysis, we also saw that Staten Island had sparse data and so considering weekly could help. Some initial efforts to do this can be found in this [notebook](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/staten_island/4models_staten_island_weekly.ipynb) and this [notebook](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/staten_island/5models_statenIsland_prophet_weekly.ipynb).
+5. We focused mainly on doing daily forecasts. However, considering weekly rat sightings could smooth out the influence of outliers. Initial efforts towards working with weekly data can be found [in the "weekly_models" folder](notebooks/weekly_models). In our exploratory data analysis, we also saw that Staten Island had sparse data and so considering weekly could help. Some initial efforts to do this can be found in this [notebook](notebooks/staten_island/4models_staten_island_weekly.ipynb) and this [notebook](notebooks/staten_island/5models_statenIsland_prophet_weekly.ipynb).
 
 6. We considered a wide variety of models. Besides the Seasonal Average Model, we also considered using a Year Ago Rolling 4 Week Average which predicts the rolling 4 week average from  last year. More complex modeling tools we tried were: SARIMAX, Prophet, NeuralProphet, XGBoost, Holt-Winters, Year Ago Rolling 4 Week Average. In some cases, we also considered models that combined two or more models such as using Prophet to make the initial forecast and then use XGBoost to improve the forecast by having XGBoost try to predict the residuals. In the case of modeling for Queens and Bronx, we tried Ridge Regression and an Ensemble Model which took the average of Prophet, Ridge Regression, XGBoost, and SARIMA.
 
 
-7. *Why Prophet?* As we understand it, Prophet uses a [decomposition of time series](https://en.wikipedia.org/wiki/Decomposition_of_time_series) but has features that appeared relevant to our situation. For example, Prophet is able to account for [holidays and special events](https://facebook.github.io/prophet/docs/seasonality,_holiday_effects,_and_regressors.html#modeling-holidays-and-special-events), for multiple seasonalities at once such as weekly and yearly seasonality, and for [changes in trend](https://facebook.github.io/prophet/docs/trend_changepoints.html).
+7. *Why Prophet?* As we understand it, Prophet uses a [decomposition of time series](https://en.wikipedia.org/wiki/Decomposition_of_time_series) but has features that appeared relevant to our situation. For example, Prophet is able to account for [holidays and special events](https://facebook.github.io/prophet/docs/seasonality,_holiday_effects,_and_regressors.html#modeling-holidays-and-special-events), for multiple seasonalities at once such as weekly and yearly seasonality, and for [changes in trend](https://facebook.github.io/prophet/docs/trend_changepoints.html). The change in trend can be observed at the citywide level in an STL decomposition.
+
+<p align="center">
+  <img src="results/eda/stl_decomposition.png" width="" alt="Logo" />
+</p>
 
 
-
-For more details on our modeling approach, please refer [here](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/evaluation_plan.md).
+For more details on our modeling approach, please refer [here](notebooks/evaluation_plan.md).
 
 ## Project Directory
 
@@ -279,19 +281,13 @@ spring-2026-rat-activity-nyc/
 ```
 
 
-
-
-
 ## Example of Workflow
 
 We aimed to do a citywide forecast, and a forecast for each borough. Due to their distinct behavior, there will be variations in the models chosen and the work-flow. To get a general idea, we explain the workflow for Manhattan.
 
-- [0baselines.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/manhattan/0baselines.ipynb) This first notebook contains the baseline model. This notebook is technically redundant since we had gathered the baseline models in [this notebook](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/baselines.ipynb) already and then compared the baseline once more in [1modeling_experiments.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/manhattan/1modeling_experiments.ipynb). 
+- [0baselines.ipynb](notebooks/manhattan/0baselines.ipynb) This first notebook contains the baseline model. This notebook is technically redundant since we had gathered the baseline models in [this notebook](notebooks/baselines.ipynb) already and then compared the baseline once more in [1modeling_experiments.ipynb](notebooks/manhattan/1modeling_experiments.ipynb).
 
-
-
-- [1modeling_experiments.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/manhattan/1modeling_experiments.ipynb) This notebook first starts by loading the data set on rat sightings and cleans it by: grouping rat sightings by day and has target value being the number of rat sightings of that day. We truncate the data as well so that we only use 2020-01-01 to 2025-02-28 data. A TimeSeriesSplit is made according to our cross-validation scheme of 14 day test sizes with 26 folds/steps. We then compute the RMSEs and MAPEs of each model's performance on each fold and compute the average RMSEs and MAPEs of each model. All of this is collected into a dataframe displayed below. We observe in this instance that Prophet had the smallest mean RMSE and smallest MAPE. We can also visualize the performance of each model over each fold. For example, it looks like Holt-Winters is consistently performing poorly while Prophet either performs really well or is middle of the pack. Never once is Prophet actually the worse among all of the models. We can also observe that there are only two folds where Prophet does worse than the baseline model. A closer investigation into why this might be the case would be interesting.
-
+- [1modeling_experiments.ipynb](notebooks/manhattan/1modeling_experiments.ipynb) This notebook first starts by loading the data set on rat sightings and cleans it by grouping rat sightings by day and has target value being the number of rat sightings of that day. We truncate the data so that we only use 2020-01-01 to 2025-02-28 data. A TimeSeriesSplit is made according to our cross-validation scheme of 14-day test sizes with 26 folds/steps. We compute the RMSEs and MAPEs of each model on each fold and then compute the average RMSEs and MAPEs. All of this is collected into a dataframe displayed below. We observe that Prophet had the smallest mean RMSE and smallest MAPE. We also visualize the performance of each model over each fold. Holt-Winters performs consistently poorly while Prophet performs very well overall. There are only two folds where Prophet does worse than the baseline model.
 
 <p align="center">
   <img src="results/modeling/manhattan_comparisons.png" width="1500" alt="Logo" />
@@ -301,19 +297,19 @@ We aimed to do a citywide forecast, and a forecast for each borough. Due to thei
   <img src="results/modeling/manhattan_comparisons_plot.png" width="1500" alt="Logo" />
 </p>
 
-[2neural_solo_prophet.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/manhattan/2neural_solo_prophet.ipynb) We observed in the previous notebook that Prophet had performed the best. We try to improve on that by tuning the parameters of Prophet and by also considering NeuralProphet. We consider a wide range of features for NeuralProphet to use as lagged features. Among them are the apparent temperature, mean temperature, lagged values of the target, time of year, date, etc. Due to the number of parameters one might tune and the number of features considered, we use Optuna and save the results of each Optuna study to [model_neural.db](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/manhattan/model_neural.db). We find that the improvements to the mean RMSE is not significant enough to warrant using NeuralProphet. The result of a run with Optuna is displayed below. The improvement on average RMSE is ~0.01. Hardly worth the extra computational effort.
+- [2neural_solo_prophet.ipynb](notebooks/manhattan/2neural_solo_prophet.ipynb) We observed in the previous notebook that Prophet performed the best. We try to improve on that by tuning Prophet and considering NeuralProphet. We use Optuna and save results to [model_neural.db](notebooks/manhattan/model_neural.db). The improvement in mean RMSE (~0.01) was not significant enough to justify the added computational cost.
 
 <p align="center">
   <img src="results/modeling/manhattan_neural_prophet.png" width="175" alt="Logo" />
 </p>
 
-[3xgboosted_prophet.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/manhattan/3xgboosted_prophet.ipynb) For Manhattan, we consider an XGBoost + Prophet model. The idea is that Prophet captures the general trend and behavior of rat sightings, but is very sensitive to outliers which might appear. We feed into XGBoost a variety of features that may or may not allow us to improve the model. It is unclear which features are most important and there is no domain knowledge here that can be used to pinpoint the most relevant features. We also feed prophet's own predictions and upper and lower estimates into XGBoost to see if the model performs better. In this case, it actually ends up performing worse:
+- [3xgboosted_prophet.ipynb](notebooks/manhattan/3xgboosted_prophet.ipynb) We consider an XGBoost + Prophet hybrid model. Prophet captures trend and seasonality, while XGBoost attempts to improve predictions using additional features and Prophet outputs. In this case, performance worsened.
 
 <p align="center">
   <img src="results/modeling/manhattan_hybrid.png" width="100" alt="Logo" />
 </p>
 
-[4evaluations.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/manhattan/4evaluations.ipynb) Given the work in the previous notebooks, we select Prophet as our model for forecasting Manhattan's daily rat sightings. We then use it to forecast rat sightings on the 2025-03-01 to 2026-02-28 data. To be consistent, we use 26 folds and forecast sizes of 14 days to evaluate the model's performance. We see that it performs about as expected.
+- [4evaluations.ipynb](notebooks/manhattan/4evaluations.ipynb) Given previous results, we select Prophet as the final model for Manhattan forecasting. We evaluate it on the holdout period 2025-03-01 to 2026-02-28 using 26 folds and 14-day forecast windows.
 
 <p align="center">
   <img src="results/modeling/manhattan_evaluation.png" width="125" alt="Logo" />
