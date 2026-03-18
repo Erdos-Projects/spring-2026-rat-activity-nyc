@@ -62,12 +62,41 @@ Next, we considered potential upgrades to Prophet. We tried both NeuralProphet a
 
 
 
-## Brooklyn
+## Brooklyn (Last Updated: March 17th, 2026)
 
-## Staten Island
+The Prophet and NeuralProphet models were neck and neck in their performance. One could argue for either in this case based on need e.g. Prophet for quick forecasts and NeuralProphet if one has time before the forecasts are needed. Once again, we also saw here that Prophet performed the best against all of the other intial models that were considered. The mean RMSE of Prophet was 7.30364 which beats out the second best performing moel SARIMA by ~0.64. [However, after tuning Prophet and NeuralProphet, we see mean RMSEs lowered to roughly 7.13 and 7.12 respectively.](../notebooks/brooklyn/2models_brooklyn_prophet.ipynb)
 
-## Bronx
+<p align="center">
+  <img src="modeling/brooklyn_comparisons.png" width="3000" alt="Logo" />
+</p>
 
-## Queens
+<p align="center">
+  <img src="modeling/brooklyn_comparisons_plot.png" width="1500" alt="Logo" />
+</p>
 
-## Weekly Forecasting
+
+Since NeuralProphet performed better with some *minimal* tuning, we select NeuralProphet for our final model and evaluate it on 2020-01-01 to 2026-02-28. [The mean RMSE on the whole data yielded was 6.237](../notebooks/brooklyn/3evaluation.ipynb).
+
+
+## Staten Island  (Last Updated: March 17th, 2026)
+
+The nature of Staten Island's 311 lead to all of the models being quite similar in performance. In the table below, we see that Prophet had a mean RMSE of 1.458783 which barely beats out the seasonal average model which had a mean RMSE of 1.484731. [We selected Prophet here for further tuning and also considered NeuralProphet.](../notebooks/staten_island/2neural_solo_prophet.ipynb). NeuralProphet had a mean RMSE of 1.309096 which was a slight improvement, but due to amount of tuning of parameters we needed to achieve this, we preferred to use Prophet. We selected Prophet and [the mean RMSE on the whole data yielded was 1.38](../notebooks/staten_island/3evaluations.ipynb).
+
+<p align="center">
+  <img src="modeling/statenisland_comparisons.png" width="" alt="Logo" />
+</p>
+
+
+## Bronx & Queens (Last Updated: March 17th, 2026)
+
+We had done the modeling for Bronx and Queens together for this project. For [future work](furtherwork.md) we might consider doing more robust modeling comparison like above. For example, we did not consider Holt-Winters or derivative models like NeuralProphet nor hybrid models such as Prophet and XGBoost on residuals. Given our experience from the previous boroughs, we felt confident in using Prophet and considered ridge regression which was not considered in the previous boroughs. Ridge regression is a *linear model* but due to the lower amounts of rat sightings, there is possibility that it might perform better than Prophet. This possibility does not occur. We also considered an Ensemble model which predicts the averaged of SARIMA, ridge regression, Prophet, and XGBoost forecasts. Surprisingly, there was some improvement in forecasting for Queens.
+
+<p align="center">
+  <img src="modeling/bronx_and_queens_comparisons_bar_plot.png" width="" alt="Logo" />
+</p>
+
+At the end of the day, we still chose to use Prophet for the final evaluations. The main issue being that Ensemble uses four models for minimal improvements. We also see this for Bronx where Ensemble is narrowly beat out by Prophet.
+
+[The final evaluations of Prophet for Bronx gave a mean RMSE of 3.939486 and for Queens gave a mean RMSE 3.374177](../notebooks/bronx_and_queens/3evaluations.ipynb). Surprisingly, Bronx performed worse than expected, but Prophet performed slightly better for Queens. For [future work](furtherwork.md), we might rule out the use of the Ensemble model and consider instead NeuralProphet and the hyrbid model we had considered above.
+
+

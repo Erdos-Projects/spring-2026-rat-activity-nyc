@@ -75,7 +75,7 @@ There are some obvious general improvements that can be made right off the bat.
 
 ## Bronx & Queens
 
-The modeling done for Bronx and Queens were more limited. We had considered the Seasonal Average Model, Prophet, SARIMA, XGBoost Ridge Regression, and the Ensemble Model which takes the average of the preious four models. The margins were quite slim and so we chose to do forecasts with Prophet due to computational speed. Some more work is then possible.
+The modeling done for Bronx and Queens were more limited. We had considered the Seasonal Average Model, Prophet, SARIMA, XGBoost Ridge Regression, and the Ensemble Model which takes the average of the preious four models. The margins were quite slim and so we chose to do forecasts with Prophet due to computational speed. Some more work is then possible. We also did not have time to get around to tuning parameters for Prophet or XGBoost to see if performance could improve in any significant manner. The mean RMSEs were already low and saw with Staten Island that improvements at this point are quite limited. However, one could still try to see if performance can be improved in this way.
 
 1. Test out Holt-Winters.
 
@@ -85,7 +85,9 @@ The modeling done for Bronx and Queens were more limited. We had considered the 
 
 4. Test out the Hyrbdi Prophet+XGBoost model.
 
-5. Do the previous points but also consider tuning the parameters and doing some more feature engineering and feature selection work.
+5. Do the previous points but also consider tuning the parameters and doing some more feature engineering and feature selection work. 
+
+6. Include weather data as features and consider lags of weather related feautres.
 
 ## Weekly Average Forecasting
 
