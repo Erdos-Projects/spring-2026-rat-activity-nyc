@@ -53,9 +53,9 @@
     ```
     and option (b) is to go to the [notebooks/package_installs.ipynb](notebooks/package_installs.ipynb) and run it to download the necessary packages.
 
-2. Go to [scr/data/download_recent_data.ipynb](scr/data/download_recent_data.ipynb) and run the notebook to download the most recent data off the web.
+2. Still go to [notebooks/package_installs.ipynb](notebooks/package_installs.ipynb) and run the notebook and check everything runs correctly.
 
-3. If one is seeking just the two week forecast of rat sightings, go to [notebooks/forecast.ipynb](notebooks/forecast.ipynb) and run the whole notebook. The notebook should have a runtime of approximately 10 seconds. Scroll to the bottom of the notebook for the forecasts. Note that due to computational complexity and runtime, we have not chosen to use the "best model" (i.e. models with the lowest mean RMSEs following our evaluation method) for every borough in this notebook.
+3. If one is seeking just the two week forecast of rat sightings, then go to [scr/data/download_recent_data.ipynb](scr/data/download_recent_data.ipynb) and run the notebook to download the most recent data off the web. Then, go to [notebooks/forecast.ipynb](notebooks/forecast.ipynb) and run the whole notebook. The notebook should have a runtime of approximately 10 seconds. Scroll to the bottom of the notebook for the forecasts. Note that due to computational complexity and runtime, we have not chosen to use the "best model" (i.e. models with the lowest mean RMSEs following our evaluation method) for every borough in this notebook.
 
 ## Results and Further Work
 
@@ -69,20 +69,19 @@ The New York City (NYC) rat is considered a cultural symbol of NYC.
 It is estimated that there are about 3 million rats in NYC and in 
 recent history, the number of rats has become incredibly problematic. 
 Rats spread disease, attack small infants and children, spread waste, 
-eat and steal food, and can cause infrastructure damage. However, 
-there is some hope as the extended winters due to climate change has 
-led to predictions that the extreme cold would cull the rat population. 
-Furthermore, the widespread adoption of better trash storage systems 
-and better waste management procedures has led to, allegedly, fewer 
-rat problems. With recent breakthroughs in tracking rat movement in 
-NYC, there is a bit more hope in controlling NYC's rat population. 
-In this project, we would like to understand the rat population and 
-its movements in NYC. We seek to answer two key questions regarding 
-the rat activity in NYC. The main question(s) we found ourselves attempting 
+eat and steal food, and can cause infrastructure damage. Among other things, [Mayor Eric Adams established the Office of Rodent Mitigation](https://www.nyc.gov/mayors-office/news/2025/12/mayor-adams-signs-executive-order-establishing-office-of-rodent-) (which was later [revoked by Mayor Mamdani](https://www.ibtimes.co.uk/what-are-executive-orders-mayor-zohran-mandani-revoked-how-it-affects-nyc-1767594)) and NYC began its ["trash revoluation"](https://secretnyc.co/nyc-trash-bin-laws-fines-june-2026/). There is some hope that extended winters due to climate change and extreme cold might cull the rat population. Furthermore, the widespread adoption of better trash bins and better waste management procedures has led to notably 
+rat problems. The big rat problem has also motivated [Transit to track rodent sightings on subway cars](https://transitapp.com/rats).
+
+In this project, we would like to understand 311 rat sightings in NYC. The main question(s) we found ourselves attempting 
 to answer is
 
-**Questions:** Can one predict the future number of rat sightings reported to 311 for each day for the next 14 days at a citywide and borough level? 
-How can one improve these predictions by utilizing weather data and various engineered features? How differently do the models perform on each borough?
+>**Questions:** 
+>
+>Can one predict the future number of rat sightings reported to 311 for each day for the next 14 days at a citywide and borough level? 
+>
+>How can one improve these predictions by utilizing weather data and various engineered features? 
+>
+> How differently do the models perform on each borough?
 
 As part of attempting to answer this question, we found ourselves considering 
 rat inspection data, the question of forecasting at the ZIP code level, 
