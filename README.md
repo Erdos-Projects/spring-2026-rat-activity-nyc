@@ -227,7 +227,7 @@ We settled on the problem of forecasting the number of rat sightings with a fore
 7. *Why Prophet?* As we understand it, Prophet uses a [decomposition of time series](https://en.wikipedia.org/wiki/Decomposition_of_time_series) but has features that appeared relevant to our situation. For example, Prophet is able to account for [holidays and special events](https://facebook.github.io/prophet/docs/seasonality,_holiday_effects,_and_regressors.html#modeling-holidays-and-special-events), for multiple seasonalities at once such as weekly and yearly seasonality, and for [changes in trend](https://facebook.github.io/prophet/docs/trend_changepoints.html). The change in trend can be observed at the citywide level in an STL decomposition.
 
 <p align="center">
-  <img src="results/eda/stl_decomposition.png" width="" alt="Logo" />
+  <img src="results/eda/STL_decomposition.png" width="" alt="Logo" />
 </p>
 
 
