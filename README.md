@@ -18,12 +18,13 @@
 
 *(Add links to LinkedIn / personal sites later)*
 
-- Krishna Aryal
+- [Krishna Aryal]()
   
 - [Kevin Dao](https://daokevin06.github.io/)
+
 - [Yael Eisenberg](https://www.linkedin.com/in/yael-eisenberg-6608609a/)
 
-- Ifeoluwa Solomon
+- [Ifeoluwa Solomon]()
 
 ---
 
