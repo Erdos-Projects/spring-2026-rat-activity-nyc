@@ -25,6 +25,44 @@
 
 ---
 
+##  Table of Contents</p>
+
+1. [Quick Start](#quick-start)  
+2. [Results and Further Work](#results-and-further-work)  
+3. [Description](#description)  
+4. [Geographic Level](#geographic-level)  
+5. [Data Sources](#data-sources)  
+6. [Literature](#literature)  
+7. [Exploratory Data Analysis](#exploratory-data-analysis)  
+8. [Modeling Approach](#modeling-approach)  
+9. [Project Directory](#project-directory)  
+10. [Example of Workflow](#example-of-workflow)  
+
+## Quick Start
+
+0. Clone the repository
+
+   ```bash
+   git clone <repo-url>
+   cd spring-2026-rat-activity-nyc
+   ```
+
+1. Next, one should install the packages. We provided two ways to do this depending on the user's preferences. (a) would be to run 
+    ```bash
+    pip install -r requirements.txt
+    ```
+    and option (b) is to go to the [notebooks/package_installs.ipny](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/package_installs.ipynb) notebook and run it to download the necessary packages.
+
+2. Go to [scr/data/download_recent_data.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/scr/data/download_recent_data.ipynb) and run the notebook to download the most recent data off the web.
+
+3. If one is seeking just the two week forecast of rat sightings, go to [notebooks/forecast.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/forecast.ipynb) and run the whole notebook. The notebook should have a runtime of approximately 10 seconds. Scroll to the bottom of the notebook for the forecasts. Note that due to computational complexity and runtime, we have not chosen to use the "best model" (i.e. models with the lowest mean RMSEs following our evaluation method) for every borough in this notebook.
+
+## Results and Further Work
+
+For a detailed description of the results of our modeling work and for more on further work that might be done, please refer to [results/summary.md](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/results/summary.md) and [results/furtherwork.md](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/results/furtherwork.md). Due to lack of space, we have opted to collect the details in those markdown files.
+
+
+
 ## Description
 
 The New York City (NYC) rat is considered a cultural symbol of NYC. 
@@ -52,13 +90,10 @@ trash collection data, and catch basin data. We did not end up using all of this
 due to time and computational constraints, but these preliminary efforts might be useful
 for future endeavors.
 
----
 
-## Overview
+## Folder Status
 
-### Boroughs Covered
-
-| Borough | Notebook | Status |
+| Borough/Level | Notebook | Status |
 |---------|----------|--------|
 | Bronx & Queens | `notebooks/bronx_and_queens/` | Complete |
 | Brooklyn | `notebooks/brooklyn/` | Complete |
@@ -68,7 +103,7 @@ for future endeavors.
 
 ---
 
-## Data
+## Data Sources
 
 The data we gathered comes from NYC Open Data and the IRS. Not all of this data ended up being used for our forecasting purposes, but could be used in future work. There is a [notebook](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/scr/data/download_recent_data.ipynb) which downloads some of this data. The raw data can be found in [this folder](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/tree/main/scr/data). Subfolders *not* starting with "cleaned_" contains the raw data.
 
@@ -197,19 +232,6 @@ We settled on the problem of forecasting the number of rat sightings with a fore
 
 For more details on our modeling approach, please refer [here](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/evaluation_plan.md).
 
-
-## Setting Up and Notes
-
-1. First, one should install the packages. We provided two ways to do this depending on the user's preferences. (a) would be to run "pip install -r requirements.txt" and option (b) is to go to the [notebooks/package_installs.ipny](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/package_installs.ipynb) notebook and run it to download the necessary packages.
-
-2. Go to [scr/data/download_recent_data.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/scr/data/download_recent_data.ipynb) and run the notebook to download the most recent data off the web.
-
-3. If one is seeking just the two week forecast of rat sightings, go to [notebooks/forecast.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/forecast.ipynb) and run the whole notebook. The notebook should have a runtime of approximately 10 seconds. Scroll to the bottom of the notebook for the forecasts. Note that due to computational complexity and runtime, we have not chosen to use the "best model" (i.e. models with the lowest RMSEs following our evaluation method) for every borough in this notebook.
-
-## Results and Further Work
-
-For a detailed description of the results of our modeling work and for more on further work that might be done, please refer to [results/summary.md](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/results/summary.md) and [results/furtherwork.md](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/results/furtherwork.md). Due to lack of space, we have opted to collect the details in those markdown files.
-
 ## Project Directory
 
 ```text
@@ -260,7 +282,7 @@ spring-2026-rat-activity-nyc/
 
 
 
-## Example Work-Flow
+## Example of Workflow
 
 We aimed to do a citywide forecast, and a forecast for each borough. Due to their distinct behavior, there will be variations in the models chosen and the work-flow. To get a general idea, we explain the workflow for Manhattan.
 
