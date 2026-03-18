@@ -20,7 +20,8 @@
 
 - Krishna Aryal
 - Kevin Dao
-- Yael Eisenberg
+- [Yael Eisenberg](https://www.linkedin.com/in/yael-eisenberg-6608609a/)
+
 - Ifeoluwa Solomon
 
 ---
