@@ -105,7 +105,7 @@ for future endeavors.
 
 ## Data Sources
 
-The data we gathered comes from NYC Open Data and the IRS. Not all of this data ended up being used for our forecasting purposes, but could be used in future work. There is a [notebook](scr/data/download_recent_data.ipynb) which downloads some of this data. The raw data can be found in [this folder](scr/data). Subfolders *not* starting with "cleaned_" contains the raw data.
+The data we gathered comes from NYC Open Data and the IRS. Not all of this data ended up being used for our forecasting purposes, but could be used in future work. There is a [notebook](scr/data/download_recent_data.ipynb) which downloads some of this data. The raw data can be found in [this folder](scr/data). Subfolders *not* starting with "cleaned_" contains the raw data. The dataset consisting of ZIP code data was kept [here](scr/cleaning/map_data_for_cleaning). It was used to fill in missing ZIP code data during EDA and not for the modeling process.
 
 | Dataset | Source | Description |
 |---------|--------|-------------|
@@ -115,7 +115,9 @@ The data we gathered comes from NYC Open Data and the IRS. Not all of this data 
 | IRS Income Data | [IRS SOI Tax Stats](https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics) | ZIP-Level Income Data |
 | DSNY Monthly Tonnage Data | [NYC Open Data](https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5/about_data) | Tonnage Data for Waste |
 | 2010-2019 311 Reports| [NYC Open Data](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-2019/76ig-c548/about_data) | 311 Reports
-Imported as needed | [Open Meteo](https://open-meteo.com/) | Weather Data
+| NYC Weather Data | [Open Meteo](https://open-meteo.com/) | Weather Data using (lat, lon) = (40.7831, -73.9712) |
+| ZIP Codes | [Simple Maps](https://simplemaps.com/data/us-zips) | ZIP Code Data |
+
 ---
 
 ## Literature
