@@ -24,7 +24,7 @@
 
 - [Yael Eisenberg](https://www.linkedin.com/in/yael-eisenberg-6608609a/)
 
-- [Ifeoluwa Solomon]()
+- [Ifeoluwa Solomon](https://www.linkedin.com/in/solomon-ifeoluwa-damilare/)
 
 ---
 
