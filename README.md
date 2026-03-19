@@ -16,11 +16,7 @@
 
 ## Authors
 
-*(Add links to LinkedIn / personal sites later)*
-
-- **Krishna Aryal**  
-  💻 GitHub: https://github.com/kraryal  
-  🎓 Google Scholar: https://scholar.google.com/citations?authuser=5&user=fsWWqa0AAAAJ  
+- Krishna Aryal ([Github](https://github.com/kraryal), [Google Scholar](https://scholar.google.com/citations?authuser=5&user=fsWWqa0AAAAJ))
   
 - [Kevin Dao](https://daokevin06.github.io/)
 
@@ -255,6 +251,7 @@ spring-2026-rat-activity-nyc/
 |   |   ├── extra_modeling_with_more_data.ipynb # Model with Pre2020 Data
 |   |   ├── model_neural.db # Optuna Study Results of NeuralProphet
 |   |   └── xgprophet_model26.ipynb # Optuna Study Results of Hybrid Model
+|   ├── lightning_logs/ # Leftover files from NeuralProphet
 |   ├── manhattan/
 |   |   ├── 0baselines.ipynb # Collects the Seasonal Average Forecast
 |   |   ├── 1modeling_experiments.ipynb # Initial Modeling Comparisons
@@ -280,7 +277,17 @@ spring-2026-rat-activity-nyc/
 ├── scr/ 
 │   ├── cleaning/ # Notebooks for Cleaning Data
 │   ├── features/ # Notebooks with Work on Studyng Features
-│   └── data/ # Holds Our Data 
+│   └── data/
+|   |   ├── cleaned_irs_zip/ 
+|   |   ├── cleaned_rat_inspection_data/ 
+|   |   ├── cleaned_rat_sightings_data/
+|   |   ├── irs_zip/ # raw data from IRS
+|   |   ├── rat_sightings_data/ # raw data from OpenNYC for 311 Rat Sightings
+|   |   ├── split_up_rat_inspection_data/ # raw data from OpenNYC for Rat Inspections
+|   |   ├── storm_catch_basin_data/ # raw data from OpenNYC for Catch Basin locations
+|   |   ├── trash_data/ # raw data from OpenNYC on Refuse Tonnage by Month
+|   |   ├── weather_data/ # raw data from Open-Meteo for weather data in Manhattan
+|   |   └── download_recent_data.ipynb # notebook downloading recent data off the web
 ├── LICENSE
 ├── README.md
 ├── requirements.txt
