@@ -18,7 +18,9 @@
 
 *(Add links to LinkedIn / personal sites later)*
 
-- [Krishna Aryal](https://github.com/kraryal/)
+- **Krishna Aryal**  
+  💻 GitHub: https://github.com/kraryal  
+  🎓 Google Scholar: https://scholar.google.com/citations?authuser=5&user=fsWWqa0AAAAJ  
   
 - [Kevin Dao](https://daokevin06.github.io/)
 
