@@ -266,24 +266,32 @@ spring-2026-rat-activity-nyc/
 |   ├── baselines.ipynb # Notebook with Baseline Model Performance
 |   ├── eda.ipynb # Notebook on EDA
 |   ├── evaluation_plan.md 
+|   ├── final_results.ipny # Notebook reproducing results for city and boroughs 
 |   ├── forecast.ipynb # Notebook Probiding 2 Week Forecasts
 │   └── package_installs.ipynb # Notebook to Install Necessary Files
 ├── results/
 |   ├── eda/ # Folder Containing .pngs from EDA
 │   ├── modeling/ # Folder Containing Modeling Results
 |   ├── furtherwork.md # Markdown Describing Furtherwork to be Done
-│   └── summary.md # Markdown Summarizing the Project
+|   ├── summary.md # Markdown Summarizing the Project
+│   └── workflow.png # Diagram of workflow
 ├── scr/ 
 │   ├── cleaning/ # Notebooks for Cleaning Data
 │   ├── features/ # Notebooks with Work on Studyng Features
 │   └── data/ # Holds Our Data 
 ├── LICENSE
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── summary.pdf # Exercutive summary
 ```
 
-
 ## Example of Workflow
+
+
+<p align="center">
+  <img src="results/workflow.png" width="1500" alt="Logo" />
+</p>
+
 
 We aimed to do a citywide forecast, and a forecast for each borough. Due to their distinct behavior, there will be variations in the models chosen and the work-flow. To get a general idea, we explain the workflow for Manhattan.
 
