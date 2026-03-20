@@ -58,7 +58,11 @@
     ```b
     conda env create -f environment.yml
     ```
-    Hit yes for any prompts. Then go to Step 4.
+    Hit yes for any prompts. Then use
+    ```b
+    conda activate RSNYCEnv
+    ```
+    Then go to Step 4.
 
 4. Go to [notebooks/package_installs.ipynb](notebooks/package_installs.ipynb) and run the notebook and check everything runs smoothly.
 
