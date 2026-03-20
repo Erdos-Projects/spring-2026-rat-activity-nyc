@@ -52,15 +52,15 @@
     ```bash
     pip install -r requirements.txt
     ```
-    and option (b) is to go to the [notebooks/package_installs.ipynb](notebooks/package_installs.ipynb) and run it to download the necessary packages. These do not require usage of Conda. This should work with Python 3.12.4.
+    and option (b) is to go to the [notebooks/package_installs.ipynb](notebooks/package_installs.ipynb) and run it to download the necessary packages. These do not require usage of Conda. This should work with Python 3.12.4. Then go to step 4.
 
 3. *If there are issues with Mac and one has Conda:* Set-up the environment using 
     ```b
     conda env create -f environment.yml
     ```
-    Then use go to [notebooks/package_installs.ipynb](notebooks/package_installs.ipynb) and run the notebook. 
+    Hit yes for any prompts. Then go to Step 4.
 
-4. Still go to [notebooks/package_installs.ipynb](notebooks/package_installs.ipynb) and run the notebook and check everything runs smoothly.
+4. Go to [notebooks/package_installs.ipynb](notebooks/package_installs.ipynb) and run the notebook and check everything runs smoothly.
 
 5. If one is seeking just the two week forecast of rat sightings, then go to [scr/data/download_recent_data.ipynb](scr/data/download_recent_data.ipynb) and run the notebook to download the most recent data off the web. Then, go to [notebooks/forecast.ipynb](notebooks/forecast.ipynb) and run the whole notebook. The notebook should have a runtime of approximately 10 seconds. Scroll to the bottom of the notebook for the forecasts. Note that due to computational complexity and runtime, we have not chosen to use the "best model" (i.e. models with the lowest mean RMSEs following our evaluation method) for every borough in this notebook.
 

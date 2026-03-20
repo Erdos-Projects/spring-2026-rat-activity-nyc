@@ -1,0 +1,7 @@
+notebooks/lightning_logs
+notebooks/citywide/lightning_logs
+notebooks/manhattan/lightning_logs
+notebooks/brooklyn/lightning_logs
+notebooks/staten_island/lightning_logs
+notebooks/bronx_and_queens/lightning_logs
+notebooks/weekly_models/lightning_logs
