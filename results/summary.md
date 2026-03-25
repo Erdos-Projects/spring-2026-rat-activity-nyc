@@ -26,14 +26,14 @@ Off the top, we see that there is some signifcant autocorrelation (and partial a
   <img src="modeling/citywide_evaluation.png" width="2500" alt="Logo" />
 </p>
 
-Using various features, whos selection was motivated by ACF and PACF plots above and how closely rat sightings seem to follow weather pattens, we tuned the parameters of XGBoost and its features. We used Optuna due to the need to have many trials and our usage of many features. Again, the plot of residuals indicated that there should be quite a bit of noise. We also did not want XGBoost to pickup on any noise too closely and so built the cross-validation method into the tuning process. In the end, the hybrid model had a mean RMSE of 12.14.
+Using various features, whose selection was motivated by ACF and PACF plots above and how closely rat sightings seem to follow weather pattens, we tuned the parameters of XGBoost and its features. We used Optuna due to the need to have many trials and our usage of many features. Again, the plot of residuals indicated that there should be quite a bit of noise. We also did not want XGBoost to pickup on any noise too closely and so built the cross-validation method into the tuning process. In the end, the hybrid model had a mean RMSE of 12.14.
 
 
 <p align="center">
   <img src="modeling/citywide_prophet_xgboost.png" width="75" alt="Logo" />
 </p>
 
-A fold by fold comparison showed that the hybrid model in most of the folds. Evaluation of the hybrid model showed that we had not overfitted or underfitted to the training data with out parameter and feature choices.
+A fold by fold comparison showed that the hybrid model performed well in most of the folds. Evaluation of the hybrid model showed that we had not overfitted or underfitted to the training data with out parameter and feature choices.
 
 <p align="center">
   <img src="modeling/citywide_final_evaluation.png" width="80" alt="Logo" />
