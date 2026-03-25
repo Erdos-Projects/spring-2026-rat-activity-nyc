@@ -15,11 +15,19 @@ There are some obvious general improvements that can be made right off the bat.
   <img src="eda/locationtypes.png" width="" alt="Logo" />
 </p>
 
-    First off, we have the following regarding the distribution of rat sightings by location type. The data shows, besides "other", the most common location types involved were residential buildings. So, perhaps including data on the number of residential buildings in each borough by month could improve the models.
+    First off, we have the following regarding the distribution of rat sightings by location type. 
+    
+    The data shows, besides "other", the most common location types involved were residential buildings. 
+    
+    So, perhaps including data on the number of residential buildings in each borough by month could improve the models.
 
-    The other interesting thing to observe is the lack of entries for "sidewalk" and "steet_area" sightings. Rats are seen very often in the streets of NYC and the lack of entries indicates that reports of rats are only ever made if they are found in a building or other structure humans frequent.
+    The other interesting thing to observe is the lack of entries for "sidewalk" and "steet_area" sightings. 
+    
+    Rats are seen very often in the streets of NYC and the lack of entries indicates that reports of rats are only ever made if they are found in a building or other structure humans frequent.
 
-    The third interesting thing we found was the number of entries in "other". It is not an insignificant amount of rat sightings and pinpointing what exact sort of location those sightings were seems important if one wishes to use location types as features for modeling.
+    The third interesting thing we found was the number of entries in "other". 
+    
+    It is not an insignificant amount of rat sightings and pinpointing what exact sort of location those sightings were seems important if one wishes to use location types as features for modeling.
 
 <p align="center">
   <img src="eda/byzip.png" width="" alt="Logo" />
@@ -27,11 +35,19 @@ There are some obvious general improvements that can be made right off the bat.
 
     Above we have displayed the distribution of rat sightings by ZIP code from 2020-2025. 
 
-    We notice that in Queens, there are ZIP codes in which not a single rat sighting report has ever been made in those years. For example, ZIP code 11697 which corresponds to [Breezy Point](https://en.wikipedia.org/wiki/Breezy_Point,_Queens) in Queens. There are roughly 4,000 people that live there. Geographically, it sits in Rockaway Peninsula and so is rather secluded. One can come up with a long list of possible explanations, but more up close research would be needed to explain why. 
+    We notice that in Queens, there are ZIP codes in which not a single rat sighting report has ever been made in those years. 
+    
+    For example, ZIP code 11697 which corresponds to [Breezy Point](https://en.wikipedia.org/wiki/Breezy_Point,_Queens) in Queens. 
+    
+    There are roughly 4,000 people that live there. Geographically, it sits in Rockaway Peninsula and so is rather secluded. 
+    
+    One can come up with a long list of possible explanations, but more up close research would be needed to explain why. 
 
     The same can be applied to any ZIP codes above for which no rat sightings were reported.
 
-    Each borough also appears to have a select few ZIP codes in which the number of rat sightings are most dominant. For example, in Manhattan 10025 dominates. A strong understanding of why this is the case might offer more accurate forecasts. 
+    Each borough also appears to have a select few ZIP codes in which the number of rat sightings are most dominant.
+    
+    For example, in Manhattan 10025 dominates. A strong understanding of why this is the case might offer more accurate forecasts. 
 
 3. More tuning of the model parameters and features might offer improvements. For example, in [the notebook for the hybrid model for Manhattan](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/manhattan/3xgboosted_prophet.ipynb), we see that it is possible to reduce the mean RMSE to about 4.3 by tuning hyperparameters and features. This beats the mean RMSE of 4.58 coming from Prophet alone.
 
@@ -49,7 +65,7 @@ There are some obvious general improvements that can be made right off the bat.
 
 4. Make citywide forcasts by combining the forecasts for each borough. It can already be seen in [forecast.ipynb](https://github.com/Erdos-Projects/spring-2026-rat-activity-nyc/blob/main/notebooks/forecast.ipynb) that the forecasts at a citywide level versus summing up the borough level forecasts can be different. The question is then: "Is it a better forecast?".
 
-5. Consider rat sightings in other boroughs as features for a forecast. So far, we have modeled each borough separately and without taking account geographic impact of boroughs e.g. (a) Manhattan and Bronx and (b) Queens and Brooklyn. Because rats are not known to
+5. Consider rat sightings in other boroughs as features for a forecast. So far, we have modeled each borough separately and without taking account geographic impact of boroughs located next to each other.
 
 ## Manhattan
 
