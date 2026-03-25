@@ -33,7 +33,7 @@ Using various features, whose selection was motivated by ACF and PACF plots abov
   <img src="modeling/citywide_prophet_xgboost.png" width="75" alt="Logo" />
 </p>
 
-A fold by fold comparison showed that the hybrid model performed well in most of the folds. Evaluation of the hybrid model showed that we had not overfitted or underfitted to the training data with out parameter and feature choices.
+A fold by fold comparison showed that the hybrid model performed well in most of the folds. Evaluation of the hybrid model showed that we had not overfitted or underfitted to the training data with our parameters and feature choices.
 
 <p align="center">
   <img src="modeling/citywide_final_evaluation.png" width="80" alt="Logo" />
@@ -52,14 +52,13 @@ The best performing model we found was the Prophet model. For our walk-forward c
   <img src="modeling/manhattan_comparisons_plot.png" width="1500" alt="Logo" />
 </p>
 
-Next, we considered potential upgrades to Prophet. We tried both NeuralProphet and a Hybrid model using Prophet together with XGBoost. Our results (displayed below; left is NeuralProphet and right is the Hybrid Model) showed that NeuralProphet performed slightly better than Prophet, but not enough to justify the increased runtime for NeuralProphet. We used NeuralProphet's n_lags parameter and added regressors to it. Our choices were to use 'apparent_temperature_max', 'apparent_temperature_min', and 'snowfall_sum' obtained from Open-Meteo. Our work in the folder scr/features suggested that these features could be used to improve our model. As for the hybrid model, we many features for the XGBoost model on residuals.  We know from our work at the citywide level that the residuals exhibit a lot of noise and to account for that, we included a lot of features. We used Optuna's hyerparameter for this purpose. The results of one run is displayed to the right. We see that it actually performed worse in that run. We do have reasons to believe that we can improve on Prophet by tuning hyparameters some more. This is quite computationally intensive and have not made extended attempts to do that.
+Next, we considered potential upgrades to Prophet. We tried both NeuralProphet and a Hybrid model using Prophet together with XGBoost. Our results (displayed below; left is NeuralProphet and right is the Hybrid Model) showed that NeuralProphet performed slightly better than Prophet, but not enough to justify the increased runtime for NeuralProphet. We used NeuralProphet's n_lags parameter and added regressors to it. Our choices were to use 'apparent_temperature_max', 'apparent_temperature_min', and 'snowfall_sum' obtained from Open-Meteo. Our work in the folder scr/features suggested that these features could be used to improve our model. As for the hybrid model, we had many features for the XGBoost model on residuals.  We know from our work at the citywide level that the residuals exhibit a lot of noise and to account for that, we included a lot of features. We used Optuna's parameter and feature tuning for this purpose. The results of one run is displayed to the right. We see that it actually performed worse in that run. We do have reasons to believe that we can improve on Prophet by tuning hyparameters and  features some more. This is quite computationally intensive and we have not made extended attempts to do that.
 
 <p align="center">
   <img src="modeling/manhattan_neural_prophet.png" width="175" alt="Logo" />
   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 
     <img src="modeling/manhattan_hybrid.png" height="575" alt="Logo" />
 </p>
-
 
 
 ## Brooklyn (Last Updated: March 17th, 2026)
@@ -80,7 +79,7 @@ Since NeuralProphet performed better with some *minimal* tuning, we select Neura
 
 ## Staten Island  (Last Updated: March 17th, 2026)
 
-The nature of Staten Island's 311 lead to all of the models being quite similar in performance. In the table below, we see that Prophet had a mean RMSE of 1.458783 which barely beats out the seasonal average model which had a mean RMSE of 1.484731. [We selected Prophet here for further tuning and also considered NeuralProphet.](../notebooks/staten_island/2neural_solo_prophet.ipynb). NeuralProphet had a mean RMSE of 1.309096 which was a slight improvement, but due to amount of tuning of parameters we needed to achieve this, we preferred to use Prophet. We selected Prophet and [the mean RMSE on the whole data yielded was 1.38](../notebooks/staten_island/3evaluations.ipynb).
+The nature of Staten Island's 311 rat sightings reports lead to all of the models being quite similar in performance. In the table below, we see that Prophet had a mean RMSE of 1.458783 which barely beats out the seasonal average model which had a mean RMSE of 1.484731. [We selected Prophet here for further tuning and also considered NeuralProphet.](../notebooks/staten_island/2neural_solo_prophet.ipynb). NeuralProphet had a mean RMSE of 1.309096 which was a slight improvement, but due to amount of tuning of parameters we needed to achieve this, we preferred to use Prophet. We selected Prophet and [the mean RMSE on the whole data yielded was 1.38](../notebooks/staten_island/3evaluations.ipynb).
 
 <p align="center">
   <img src="modeling/statenisland_comparisons.png" width="" alt="Logo" />
@@ -89,13 +88,13 @@ The nature of Staten Island's 311 lead to all of the models being quite similar 
 
 ## Bronx & Queens (Last Updated: March 17th, 2026)
 
-We had done the modeling for Bronx and Queens together for this project. For [future work](furtherwork.md) we might consider doing more robust modeling comparison like above. For example, we did not consider Holt-Winters or derivative models like NeuralProphet nor hybrid models such as Prophet and XGBoost on residuals. Given our experience from the previous boroughs, we felt confident in using Prophet and considered ridge regression which was not considered in the previous boroughs. Ridge regression is a *linear model* but due to the lower amounts of rat sightings, there is possibility that it might perform better than Prophet. This possibility does not occur. We also considered an Ensemble model which predicts the averaged of SARIMA, ridge regression, Prophet, and XGBoost forecasts. Surprisingly, there was some improvement in forecasting for Queens.
+We had done the modeling for Bronx and Queens together for this project. For [future work](furtherwork.md) we might consider doing more robust modeling comparison like above. For example, we did not consider Holt-Winters or derivative models like NeuralProphet nor hybrid models such as Prophet and XGBoost on residuals. Given our experience from the previous boroughs, we felt confident in using Prophet. We considered ridge regression which was not considered in the previous boroughs for diversity. Ridge regression is a *linear model* but due to the lower amounts of rat sightings, there is possibility that it might perform better than Prophet. This possibility does not occur. We also considered an Ensemble model which predicts the averaged of SARIMA, ridge regression, Prophet, and XGBoost forecasts. Surprisingly, there was some improvement in forecasting for Queens.
 
 <p align="center">
   <img src="modeling/bronx_and_queens_comparisons_bar_plot.png" width="" alt="Logo" />
 </p>
 
-At the end of the day, we still chose to use Prophet for the final evaluations. The main issue being that Ensemble uses four models for minimal improvements. We also see this for Bronx where Ensemble is narrowly beat out by Prophet.
+At the end of the day, we still chose to use Prophet for the final evaluations. The main issue being that the ensemble model uses four models for minimal improvements. 
 
 [The final evaluations of Prophet for Bronx gave a mean RMSE of 3.939486 and for Queens gave a mean RMSE 3.374177](../notebooks/bronx_and_queens/3evaluations.ipynb). Surprisingly, Bronx performed worse than expected, but Prophet performed slightly better for Queens. For [future work](furtherwork.md), we might rule out the use of the Ensemble model and consider instead NeuralProphet and the hyrbid model we had considered above.
 
